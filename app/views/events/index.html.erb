@@ -2,5 +2,19 @@
 
 
 <% @events.each do |event| %>
-  <%= event %>
+  <%= link_to event.name, event %><br>
+<% end %>
+<br><br>
+<%= link_to "Make an Event", "/events/new" %>
+<br><br>
+<%= link_to "Sign In", new_user_session_path %>
+<br><br>
+<%= link_to "Sign Out", destroy_user_session_path %> 
+
+<br><br>
+<h3>Currently logged in:</h3>
+<% unless current_user.nil? %>
+  <%= link_to User.find(current_user.id).name, "/users/#{current_user.id}" %>
+<% else %>
+  <p>Nobody</p>
 <% end %>

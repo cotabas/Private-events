@@ -1,0 +1,9 @@
+<%= @event.name %><br>
+
+<%= @event.location %><br>
+
+<%= @event.date %><br>
+
+<%= User.find(@event.owner_id).name %>
+
+<%= link_to "Home",  "/" %>
