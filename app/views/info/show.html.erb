@@ -1,0 +1,22 @@
+<h2>Events: </h2>
+<% Event.column_names.each do |name| %>
+  <div><%= name %></div>
+<% end %>
+<br><br>
+<% Event.all.each do |name| %>
+  <% Event.column_names.each do |val| %>
+    <div><%= "#{val}: #{name.send(val)}" %></div>
+  <% end %><br>
+<% end %>
+<br><br>
+<h2>Users:</h2>
+<% User.column_names.each do |name| %>
+  <div><%= name %></div>
+<% end %>
+<br><br>
+
+<h2>Invites:</h2>
+<% EventInvite.column_names.each do |name| %>
+  <div><%= name %></div>
+<% end %>
+<br><br>
