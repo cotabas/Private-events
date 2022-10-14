@@ -13,6 +13,11 @@
 <% User.column_names.each do |name| %>
   <div><%= name %></div>
 <% end %>
+<% User.all.each do |user| %>
+  <%= user.inspect %>
+  <%= link_to 'Delete', user_path(user), method: :delete %>
+    <br/>
+<% end %>
 <br><br>
 
 <h2>Invites:</h2>

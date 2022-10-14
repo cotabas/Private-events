@@ -9,4 +9,9 @@ Rails.application.routes.draw do
   resources :users
 
   get :info, to: 'info#show'
+
+  # devise_for :users, controllers: {
+  #   sessions: 'users/sessions'
+  # }
+  
 end
