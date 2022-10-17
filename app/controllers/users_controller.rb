@@ -12,7 +12,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @user.destroy
     flash[:success] = "worx"
-    redirect_to root_path, status: :see_other
+    redirect_to info_path, status: :see_other
   end
 
 end

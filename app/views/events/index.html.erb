@@ -1,8 +1,14 @@
 <h1>Events:</h1>
-
+<% flash.each do |type, msg| %>
+  <div>
+    <%= msg %>
+  </div>
+<% end %>
 
 <% @events.each do |event| %>
-  <%= link_to event.name, event %><br>
+  <%= link_to event.name, event %>
+    <%= link_to 'Delete', event_path(event), method: :delete %>
+    <br/>
 <% end %>
 <br><br>
 <%= link_to "Make an Event", "/events/new" %>

@@ -25,3 +25,8 @@
   <div><%= name %></div>
 <% end %>
 <br><br>
+<% flash.each do |type, msg| %>
+  <div>
+    <%= msg %>
+  </div>
+<% end %>

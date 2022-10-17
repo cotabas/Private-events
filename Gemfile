@@ -6,6 +6,9 @@ ruby "3.1.2"
 #devise for authentication
 gem 'devise'
 
+#jquery to be able to delete stuff?? seems weird, I must be doing something wrong
+gem 'jquery-rails'
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.3", ">= 7.0.3.1"
 

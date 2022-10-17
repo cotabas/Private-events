@@ -18,8 +18,8 @@
   </div>
   
   <div>
-    <%= form.label :location %><br>
-    <%= form.text_field :location %>
+  <% invitable = User.all.map { |user| user.name } %>
+    <%= form.select(:invited_ids, invitable, {  }, { :multiple => true, :size => 9 }) %>
     <% @event.errors.full_messages_for(:location).each do |err| %>
       <div><%= err %></div>
     <% end %>
