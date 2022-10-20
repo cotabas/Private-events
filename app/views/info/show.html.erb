@@ -25,6 +25,10 @@
   <div><%= name %></div>
 <% end %>
 <br><br>
+<%= p EventInvite.all %>
+<% EventInvite.all.each do |invite| %>
+  <%= invite.inspect %>
+<% end %>
 <% flash.each do |type, msg| %>
   <div>
     <%= msg %>

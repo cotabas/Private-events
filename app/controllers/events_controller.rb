@@ -16,8 +16,13 @@ class EventsController < ApplicationController
   def create
     @event = Event.new(event_params)
     @event.owner_id = current_user.id
-
+    
+    
     if @event.save
+      invites = params[:invited_ids]
+      # invites << @event.id
+      EventInvite.new(invites)
+
       redirect_to @event
     else
       render :new, status: :unprocessable_entity
